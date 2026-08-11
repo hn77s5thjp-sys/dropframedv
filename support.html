@@ -17,7 +17,7 @@
 <span class="spacer"></span><span class="legend">Support</span></div>
 <main class="doc"><div class="wrap">
 <h1>Support</h1>
-<p>Email <a href="mailto:hello@dropframedv.com">hello@dropframedv.com</a> and you will get a reply from the person who made the app. Include your device and iOS version and it will be quicker.</p>
+<p>Email <a class="mailme" href="#">Email me</a> and you will get a reply from the person who made the app. Include your device and iOS version and it will be quicker.</p>
 <h2>Why does my footage look soft?</h2>
 <p>Because it is standard definition. DV recorded 720&times;576 in Europe and 720&times;480 in the US, and Dropframe records at those sizes so every artifact lands at the right scale. If you need a sharper file for uploading, set Resolution to 1080 in the SIZE menu &mdash; it upscales on export without changing the look.</p>
 <h2>Why is there a comb pattern on movement?</h2>
@@ -35,11 +35,19 @@
 <h2>How do I set the date stamp to a different year?</h2>
 <p>DISP &rarr; DATE STAMP &rarr; SET DATE. You can burn in any date without changing your phone's clock.</p>
 <h2>Feature requests and bugs</h2>
-<p>Both very welcome at <a href="mailto:hello@dropframedv.com">hello@dropframedv.com</a>. If you are reporting something visual, a short clip helps enormously.</p>
+<p>Both very welcome at <a class="mailme" href="#">Email me</a>. If you are reporting something visual, a short clip helps enormously.</p>
 </div></main>
 <footer class="foot"><div class="wrap">
-<div class="links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="mailto:hello@dropframedv.com">hello@dropframedv.com</a></div>
+<div class="links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a class="mailme" href="#">Email me</a></div>
 <div>&copy; 2026 Connor Clements.</div>
 </div></footer>
+<script>
+(function(){
+  var u = 'connorclements', d = 'hotmail' + '.' + 'com';
+  document.querySelectorAll('.mailme').forEach(function(a){
+    a.href = 'mailto:' + u + '@' + d;
+  });
+})();
+</script>
 </body>
 </html>
