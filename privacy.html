@@ -37,11 +37,19 @@
 <h2>Changes</h2>
 <p>If this policy ever changes, the revised version will be posted here with an updated date. Material changes will also be noted in the app's release notes.</p>
 <h2>Contact</h2>
-<p>Questions about privacy: <a href="mailto:hello@dropframedv.com">hello@dropframedv.com</a></p>
+<p>Questions about privacy: <a class="mailme" href="#">Email me</a></p>
 </div></main>
 <footer class="foot"><div class="wrap">
-<div class="links"><a href="index.html">Home</a><a href="support.html">Support</a><a href="mailto:hello@dropframedv.com">hello@dropframedv.com</a></div>
+<div class="links"><a href="index.html">Home</a><a href="support.html">Support</a><a class="mailme" href="#">Email me</a></div>
 <div>&copy; 2026 Connor Clements.</div>
 </div></footer>
+<script>
+(function(){
+  var u = 'connorclements', d = 'hotmail' + '.' + 'com';
+  document.querySelectorAll('.mailme').forEach(function(a){
+    a.href = 'mailto:' + u + '@' + d;
+  });
+})();
+</script>
 </body>
 </html>
