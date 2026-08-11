@@ -81,6 +81,20 @@
 </dl>
 </div></section>
 <section class="section"><div class="wrap">
+<span class="legend">Why I made this</span>
+<h2>The format that made filmmaking possible for me</h2>
+<p>I fell in love with cinema as a teenager in the nineties and knew I wanted to make films. The cost made it impossible. Celluloid stock and processing were simply out of reach.</p>
+<p>Then MiniDV arrived, and with it a camera I could actually afford. Filmmakers I admired were already there: Lars von Trier, Danny Boyle, David Lynch, Richard Linklater. <em>Dancer in the Dark</em>, <em>28 Days Later</em>, <em>Inland Empire</em>, <em>Tape</em>. None of them apologised for the format — they used it deliberately, for realism and for speed.</p>
+<dl class="specs">
+<div class="spec"><dt>Mobility</dt><dd>Small camcorders meant shooting in tight spaces and public places without a crew-sized footprint. You could be discreet, and you could move.</dd></div>
+<div class="spec"><dt>Accessibility</dt><dd>No film stock, no processing bills. It democratised filmmaking by removing the one barrier that had kept people like me out.</dd></div>
+<div class="spec"><dt>Aesthetic intent</dt><dd>The pixelation, the low-light grain, the raw texture — none of it was a compromise. It was the point. It read as modern reality, or as psychological decay, depending on who was holding the camera.</dd></div>
+</dl>
+<p>Modern cameras are extraordinary. Phones, DSLRs, camcorders — all pristine, all ultra HD, all effectively perfect. But I miss how those old cameras <em>saw</em>. The rawness, the limits, the way the image fell apart at the edges and told you something by doing it. And the cameras themselves are getting harder to find every year.</p>
+<p>Dropframe DV puts them back in your hand: a modern capture device, looking through old eyes.</p>
+<p class="legend" style="display:block;margin-top:1.5rem">— Connor Clements</p>
+</div></section>
+<section class="section"><div class="wrap">
 <span class="legend">Price</span>
 <h2>Buy it once. Own it.</h2>
 <p>No weekly billing, no ads, no watermark, no account, no data collection. Everything runs on your device. Universal purchase across iPhone and iPad.</p>
@@ -88,7 +102,7 @@
 <a class="btn" href="#"><span class="key"></span>Download on the App Store</a></div>
 </div></section>
 <footer class="foot"><div class="wrap">
-<div class="links"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:hello@dropframedv.com">hello@dropframedv.com</a></div>
+<div class="links"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a class="mailme" href="#">Email me</a></div>
 <div>Dropframe DV requires iPhone with iOS 17 or later.</div>
 <div>&copy; 2026 Connor Clements. Not affiliated with Sony, Canon, Panasonic or JVC.</div>
 </div></footer>
@@ -110,6 +124,14 @@
     var mo = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
     d.textContent = n.getDate() + ' ' + mo[n.getMonth()] + ' ' + n.getFullYear();
   }
+})();
+</script>
+<script>
+(function(){
+  var u = 'connorclements', d = 'hotmail' + '.' + 'com';
+  document.querySelectorAll('.mailme').forEach(function(a){
+    a.href = 'mailto:' + u + '@' + d;
+  });
 })();
 </script>
 </body>
