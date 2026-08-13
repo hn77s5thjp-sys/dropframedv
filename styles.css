@@ -111,3 +111,22 @@ body {
 .doc ul { padding-left: 1.1rem; }
 .doc li { margin-bottom: .4rem; }
 .doc .updated { font-family: "IBM Plex Mono", monospace; font-size: .74rem; color: var(--ink-soft); }
+
+/* ---------- Screenshots ----------
+   Presented in a recessed frame so they read as a screen sitting in the page
+   rather than as loose images floating on the chassis colour. */
+.shot { margin: 2rem 0 0; }
+.shot img {
+  display: block; width: 100%; height: auto;
+  border-radius: 4px; background: var(--tape);
+  box-shadow: 0 0 0 1px var(--shell-edge), 0 10px 30px rgba(0,0,0,.16);
+}
+.shot figcaption {
+  margin-top: .7rem; max-width: 58ch;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .72rem; line-height: 1.55; color: var(--ink-soft);
+}
+@media (max-width: 620px) {
+  .shot { margin-top: 1.4rem; }
+  .shot figcaption { font-size: .68rem; }
+}
