@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dropframe DV for Mac — convert any footage to genuine DV</title>
+<meta name="description" content="Drop in any footage and get genuine MiniDV out. Not a filter: motion is synthesised to the real field rate, so 24p becomes true 50i. ProRes out, LUT export, batch queue.">
+<link rel="canonical" href="https://dropframedv.com/mac.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dropframedv.com/mac.html">
+<meta property="og:title" content="Dropframe DV for Mac">
+<meta property="og:description" content="Convert any footage to genuine DV. Motion synthesised to the real field rate — the thing a filter mathematically cannot do.">
+<meta property="og:image" content="https://dropframedv.com/shots/mac-16x9-newsroom.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="status">
+  <span class="dot"></span>
+  <span class="name"><a href="index.html" style="color:inherit;text-decoration:none">Dropframe DV</a></span>
+  <span class="spacer"></span>
+  <span class="legend">For Mac</span>
+</div>
+
+<header class="hero"><div class="wrap">
+  <div class="panel viewfinder">
+    <div class="osd osd-tl">SOURCE</div>
+    <div class="osd osd-tr">DV</div>
+    <h1>Any footage in<em>genuine DV out</em></h1>
+    <p class="lede">Drop in what you shot. Pick one of eight camcorders. Dropframe rebuilds it through the real signal path and writes ProRes your editor cuts natively.</p>
+    <div class="osd osd-bl">50i · 720×576<br>BOARDWALK</div>
+    <div class="osd osd-br">PRORES 422</div>
+  </div>
+  <div class="buy">
+    <div class="price">£34.99<small>One payment. No subscription.</small></div>
+    <a class="btn" href="#"><span class="key"></span>Download on the Mac App Store</a>
+  </div>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <span class="legend">The argument</span>
+  <h2>A filter cannot do this. It is arithmetic, not opinion.</h2>
+  <p>A camcorder sampled the world 50 times a second in PAL, 59.94 in NTSC. Every field is a separate moment in time. That temporal density is why camcorder footage feels immediate rather than cinematic.</p>
+  <p>Drop in 24p footage and you have 24 moments. The other 26 do not exist anywhere in the file. They cannot be filtered into being — they have to be <em>synthesised</em>: estimate the motion between the two nearest source frames, then render the field at the instant it should have been sampled.</p>
+  <p>Every VHS plugin skips this. They draw scanlines onto 24 frames. On a static shot you cannot tell. On a pan it is obviously wrong — the comb teeth sit still between fields instead of stepping forward in time.</p>
+  <div class="menu">
+    <div class="menu-bar"><span>SOURCE</span><span class="mid">FIELD SCHEDULE</span><span>SYNTH</span></div>
+    <div class="row"><span class="nm">25p → PAL 50i</span><span class="yr">50%</span><span class="sp">Every other field lands on a real frame</span></div>
+    <div class="row"><span class="nm">30p → NTSC 60i</span><span class="yr">65%</span><span class="sp">Two thirds have no source moment</span></div>
+    <div class="row"><span class="nm">23.976 → NTSC 60i</span><span class="yr">80%</span><span class="sp">The classic 5:2 pulldown pattern</span></div>
+    <div class="row"><span class="nm">24p → PAL 50i</span><span class="yr">96%</span><span class="sp">24 and 50 share no useful common factor</span></div>
+  </div>
+  <p style="margin-top:1.2rem">Dropframe shows you this figure per file before you start, so a long job announces its cost rather than surprising you forty minutes in.</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <span class="legend">The app</span>
+  <h2>Choose the camera by looking, not guessing</h2>
+  <p>A real frame from your own footage, wiped between source and result. Drag the divider. Every reading on the monitor is live state — no decorative gauges.</p>
+  <figure class="shot">
+    <img src="shots/mac-16x9-newsroom.png" alt="Newsroom 16:9 with the wipe at centre" loading="lazy" width="1284" height="993">
+    <figcaption>Newsroom, 16:9. Source left, DV right — the wipe sits wherever you drag it.</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="shots/mac-scope-newsroom.png" alt="A 2.39:1 anamorphic matte applied" loading="lazy" width="1284" height="993">
+    <figcaption>2.39:1 matte. The signal chain still runs at the DV raster underneath, so the artifacts keep their correct scale.</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="shots/mac-copenhagen-ntsc.png" alt="Copenhagen profile in NTSC showing field structure" loading="lazy" width="1284" height="993">
+    <figcaption>Copenhagen in NTSC. Note the field structure — that is genuine interlacing, not a scanline overlay.</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="shots/mac-tape-condition.png" alt="Tape condition controls with dropout and head switching" loading="lazy" width="1284" height="993">
+    <figcaption>Tape condition. Dropout as hard 8×8 decode failures; head switching tearing the bottom lines.</figcaption>
+  </figure>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <span class="legend">For editors</span>
+  <h2>It lands in your timeline, not in a converter folder</h2>
+  <dl class="specs">
+    <div class="spec"><dt>ProRes out</dt><dd>422, 422 HQ and 4444. Cuts natively in Final Cut, Premiere and Resolve. H.264 and HEVC are offered but second class: re-encoding DCT artifacts through another DCT codec turns deliberate blocking into accidental mush.</dd></div>
+    <div class="spec"><dt>True field flag</dt><dd>The file carries bottom-field-first in its metadata. Without it your editor reads genuine combing as damage.</dd></div>
+    <div class="spec"><dt>LUT export</dt><dd>Writes all eight cameras as .cube files so a colourist can grade with the look inside their own timeline. A LUT carries the matrix, gamma, knee and saturation — it cannot carry chroma subsampling, DCT blocking, interlacing or smear, because those depend on neighbouring pixels and on time. The palette travels; the app does the rest.</dd></div>
+    <div class="spec"><dt>Batch queue</dt><dd>Drag files or whole folders. Runs sequentially — each job already saturates the GPU, so running two makes both slower.</dd></div>
+    <div class="spec"><dt>Any source format</dt><dd>Anything your Mac can play. Phone footage, drone, DSLR, mirrorless, screen recordings, old DV captures, GoPro. Mixed frame rates in one batch are fine.</dd></div>
+  </dl>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <span class="legend">Beyond the phone</span>
+  <h2>What offline buys that realtime cannot</h2>
+  <dl class="specs">
+    <div class="spec"><dt>Motion synthesis</dt><dd>Block matching with a confidence fallback. Where matching is unreliable it degrades to a cross-dissolve rather than inventing geometry — soft is recoverable, a warped face is not.</dd></div>
+    <div class="spec"><dt>Lanczos resampling</dt><dd>The phone box-filters because it has twenty milliseconds. Going 4K to 720×576 that aliases badly on brickwork and foliage, and the aliasing then freezes into the DCT blocks where nothing can remove it.</dd></div>
+    <div class="spec"><dt>Tape condition</dt><dd>Dropout as hard 8×8 blocks that failed to decode, held for a couple of fields and clustered along a scratch. Not analogue snow — DV failed digitally. Plus head-switching tear at the frame bottom.</dd></div>
+    <div class="spec"><dt>Before / after</dt><dd>A wipe between source and result on a real frame from your own footage, so you choose the camera by looking rather than guessing.</dd></div>
+  </dl>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <span class="legend">Cameras</span>
+  <h2>The same eight, identical to the iPhone app</h2>
+  <p>Shared code, not a port. The colour matrices, the chroma subsampling, the DCT quantisation and the interlacing are the same files on both platforms — so the same camera name gives the same look whether you shot it or converted it.</p>
+  <div class="menu">
+    <div class="menu-bar"><span>MENU</span><span class="mid">CAMERA</span><span>EXIT</span></div>
+    <div class="menu-group">SD / CCD / 1995–2001</div>
+    <div class="row"><span class="nm">BOARDWALK</span><span class="yr">1995</span><span class="sp">1/3″ 3CCD • 520 Lines • Hard Contrast</span></div>
+    <div class="row"><span class="nm">PLAYHOUSE</span><span class="yr">1998</span><span class="sp">1/3″ 3CCD • 530 Lines • Neutral RGB</span></div>
+    <div class="row"><span class="nm">COPENHAGEN</span><span class="yr">1999</span><span class="sp">1/4″ CCD • 500 Lines • Oversaturated Y2K</span></div>
+    <div class="row"><span class="nm">ARCADE</span><span class="yr">2001</span><span class="sp">1/6″ CCD • 400 Lines • Crushed Lo-Fi</span></div>
+    <div class="menu-group">Modular &amp; 24p / 1997–2002</div>
+    <div class="row"><span class="nm">NEWSROOM</span><span class="yr">1997</span><span class="sp">1/3″ 3CCD • 460 Lines • Amber Frame Mode</span></div>
+    <div class="row"><span class="nm">VERITE</span><span class="yr">2002</span><span class="sp">1/3″ 3CCD • 530 Lines • Cine Gamma • 24p</span></div>
+    <div class="menu-group">HD / 2004–2006</div>
+    <div class="row"><span class="nm">UPLINK</span><span class="yr">2004</span><span class="sp">1/3″ 3CCD • 1080i • Cool Zeiss • 60i</span></div>
+    <div class="row"><span class="nm">LASTLIGHT</span><span class="yr">2006</span><span class="sp">1/3″ 3CCD • 1080p • Cine Curve • 24p</span></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <span class="legend">Together</span>
+  <h2>Shoot on the phone. Finish on the Mac.</h2>
+  <p>The iPhone app is acquisition — a camcorder you carry. This is conversion and finishing, for everything you already shot on something else. Buy either. Most people end up with both, and the eight cameras behave identically across them.</p>
+  <div class="buy">
+    <div class="price">£34.99<small>Mac. One payment.</small></div>
+    <a class="btn" href="index.html"><span class="key"></span>See the iPhone app</a>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <span class="legend">Requires</span>
+  <h2>macOS 14 or later</h2>
+  <p>Apple silicon or Intel with Metal support. Conversion is GPU-bound — an Apple silicon Mac is substantially faster at motion synthesis. Everything runs on your device: no accounts, no uploads, no network.</p>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div class="links">
+    <a href="index.html">iPhone app</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a class="mailme" href="#">Email me</a>
+  </div>
+  <div>&copy; 2026 Connor Clements. Not affiliated with Sony, Canon, Panasonic or JVC.</div>
+</div></footer>
+
+<script>
+(function(){
+  var u = 'connorclements', d = 'hotmail' + '.' + 'com';
+  document.querySelectorAll('.mailme').forEach(function(a){
+    a.href = 'mailto:' + u + '@' + d;
+  });
+})();
+</script>
+</body>
+</html>
