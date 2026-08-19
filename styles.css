@@ -130,3 +130,35 @@ body {
   .shot { margin-top: 1.4rem; }
   .shot figcaption { font-size: .68rem; }
 }
+
+/* ---------- Card strip ----------
+   The App Store cards in a horizontal scroll-snap rail. The row runs past the
+   wrap on both sides so it reads as continuing beyond the page margin, which
+   is the affordance that says "keep going" without a caption saying it. */
+.strip {
+  margin: 2rem calc(var(--gutter) * -1) 0;
+  padding: .5rem var(--gutter) 1.25rem;
+  display: flex;
+  gap: clamp(.75rem, 2vw, 1.25rem);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--gutter);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--shell-edge) transparent;
+}
+.strip::-webkit-scrollbar { height: 8px; }
+.strip::-webkit-scrollbar-track { background: transparent; }
+.strip::-webkit-scrollbar-thumb { background: var(--shell-edge); border-radius: 4px; }
+.strip:focus-visible { outline: 3px solid var(--rec); outline-offset: 2px; }
+.strip figure { margin: 0; flex: 0 0 auto; scroll-snap-align: start; }
+.strip img {
+  display: block;
+  width: clamp(210px, 44vw, 296px);
+  height: auto;
+  aspect-ratio: 941 / 1672;
+  border-radius: 4px;
+  background: var(--shell-hi);
+  box-shadow: 0 0 0 1px var(--shell-edge), 0 10px 30px rgba(0,0,0,.16);
+}
